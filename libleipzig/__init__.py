@@ -4,4 +4,4 @@ from libleipzig.protocol import *
 from libleipzig.transport import services
 from suds import WebFault
 
-__all__ = services.keys() + ['WebFault']
+__all__ = list(services.keys()) + ['WebFault']
