@@ -83,10 +83,10 @@ be readily imported from ``libleipzig``).
 Corpora
 -------
 
-The project collects corpora in a variety of languages, German (*de*) only
-being the largest one and thus the default.  According to the reference
-implementation the following corpora are available (those marked with asterisks
-actually worked as of the time of writing):
+The project collects corpora in a variety of languages, German (*de*) being the
+largest one and thus the default.  According to the reference implementation
+the following corpora are available (those marked with asterisks actually
+worked as of the time of writing):
 
 * de* (default)
 * en*
@@ -152,14 +152,14 @@ This is the API's way to impose rate limits on anonymous users.  See
 Command-line interface
 ----------------------
 
-libleipzig provides a commandline tool called ``wortschatz`` which allows a
-thin layer upon the programmatic API in an ad-hoc fashion.  It takes the
-desired service as its first argument followed by the service's arguments.
+libleipzig ships with the ``wortschatz`` commandline tool which provides a thin
+layer upon the programmatic API in an ad-hoc fashion.  It takes the desired
+service as its first argument followed by the service's parameters.
 
 The results of the service call are printed in separate lines with the fields
 separated by commas (use ``--delimiter`` to modify that behaviour, it
 understands patterns such as ``\t`` for TAB).  Use ``--schema`` to obtain the
-service's result columns.
+service's result columns, or, if no service is supplied, a list of services.
 
 You can supply your credentials via ``--user`` and ``--password`` for
 authenticated access.
@@ -175,6 +175,9 @@ Changelog
   * Now requires suds 0.4.2 or later for Python 3.
   * Moved to distribute (Python 3 capable fork of setuptools).
   * Updated various classifiers and tags for distribute.
+
+1.3.1
+  * Added service listing to ``wortschatz`` script.
 
 1.3
   * Added commandline script ``wortschatz`` for ad-hoc access.
